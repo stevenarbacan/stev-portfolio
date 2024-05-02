@@ -22,8 +22,11 @@ class App {
   }
 
   _goToSection(e) {
+    console.log(e.target);
     if (!e.target.classList.contains("nav-icon")) return;
+    console.log(e.target);
     const section = +e.target.dataset.section - 1;
+    console.log(section);
     this._revealSection(section);
   }
 
