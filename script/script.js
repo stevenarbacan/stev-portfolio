@@ -44,6 +44,7 @@ class App {
     const homeText = this.#homeTypingText;
     this._typingText(".home-typing-text", homeText);
     this._typingText(".typing-about-title", ["About Me"]);
+    this._typingText(".typing-contact-title", ["Contact Me"]);
   }
 
   _init() {

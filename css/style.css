@@ -26,6 +26,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .particles-js-canvas-el {
@@ -36,12 +37,9 @@ body {
 
 .title {
   color: #fefefe;
-  font-size: 1.4em;
+  font-size: 2em;
   text-transform: uppercase;
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, -150%);
+  min-height: 40px;
 }
 .logo {
   position: absolute;
@@ -56,12 +54,12 @@ body {
 }
 img,
 .buttom-nav {
-  z-index: 2;
+  z-index: 4;
 }
 .buttom-nav {
   width: 95%;
-  max-width: 450px;
-  height: 75px;
+  max-width: 400px;
+  height: 70px;
   position: fixed;
   bottom: 0;
   top: 90%;
@@ -80,8 +78,8 @@ img,
   background-position: center;
 }
 .nav-btn {
-  width: 60px;
-  height: 60px;
+  width: 55px;
+  height: 55px;
   border: 1px solid #fefefe;
   background-color: transparent;
   border-radius: 12px;
@@ -117,23 +115,33 @@ img,
 .section {
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   width: 85%;
   min-height: 80vh;
-  gap: 25px;
+  gap: 35px;
   padding-top: 40px;
+  max-width: 830px;
+}
+.home-main-container,
+.about-main-container {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
 }
 .header-container {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  gap: 10px;
+  gap: 20px;
 }
 .profile-img {
-  width: 170px;
-  height: 170px;
+  width: 190px;
+  height: 190px;
   border-radius: 50%;
   border: 4px solid #fefefe;
 }
@@ -159,14 +167,28 @@ img,
 .home-body-text,
 .about-text {
   font-size: 1.7em;
-  text-indent: 20px;
+  text-indent: 30px;
   width: 100%;
 }
 
 /* ABOUT */
+.about-main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.about-container {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 60vh;
+}
 .about-img {
-  width: 70%;
-  max-width: 420px;
+  width: 50%;
   border-radius: 8px;
 }
 .about-text {
@@ -175,10 +197,17 @@ img,
 }
 
 /* CONTACT  */
+.contact-main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: 100%;
+}
 .contact-me-container {
   z-index: 2;
   width: 95%;
-  max-width: 700px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -205,7 +234,7 @@ img,
   padding: 7px 0px;
 }
 .input-group textarea {
-  height: 180px;
+  height: 150px;
   text-indent: 20px;
 }
 .send-btn {
@@ -282,22 +311,44 @@ img,
   }
 }
 @media only screen and (max-width: 500px) {
+  .buttom-nav {
+    height: 55px;
+    top: 95%;
+  }
+  .nav-btn {
+    width: 45px;
+    height: 45px;
+  }
+  .nav-icon {
+    width: 25px;
+    height: 25px;
+  }
+
   .section {
     width: 95%;
     min-height: 80vh;
     flex-direction: column;
-    justify-content: start;
     gap: 25px;
+    align-items: center;
+    padding-top: 0px;
+    justify-content: center;
+    top: 0%;
+  }
+  .home-main-container,
+  .about-main-container {
+    width: 100%;
+    gap: 20px;
   }
   .header-container {
-    gap: 8px;
+    gap: 5px;
   }
   .profile-img {
     width: 120px;
     height: 120px;
   }
   .home-header-text {
-    font-size: 1.4em;
+    font-size: 1.2em;
+    word-spacing: 3px;
     gap: 2px;
   }
   .name-text {
@@ -305,13 +356,38 @@ img,
   }
   .home-body-text,
   .about-text {
-    font-size: 1.4em;
+    font-size: 1.2em;
+    word-spacing: 3px;
   }
 
   /* ABOUT */
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .about-img {
-    width: 70%;
-    max-width: 250px;
+    width: 100%;
+    height: 40vh;
+  }
+  .about-text {
+    width: 95%;
+  }
+
+  /*Contact*/
+  /* CONTACT  */
+  .input-group textarea {
+    height: 35vh;
+    text-indent: 20px;
+  }
+  .send-btn {
+    font-size: 1.4em;
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: rgba(121, 121, 252, 0.2);
+    color: #fefefe;
   }
 }
 
