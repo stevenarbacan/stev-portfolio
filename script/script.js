@@ -45,6 +45,7 @@ class App {
     this._typingText(".home-typing-text", homeText);
     this._typingText(".typing-about-title", ["About Me"]);
     this._typingText(".typing-contact-title", ["Contact Me"]);
+    this._typingText(".typing-skills-title", ["Skills"]);
   }
 
   _init() {
