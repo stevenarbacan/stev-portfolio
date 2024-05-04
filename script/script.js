@@ -45,11 +45,11 @@ class App {
     this._typingText(".home-typing-text", homeText);
     this._typingText(".typing-about-title", ["About Me"]);
     this._typingText(".typing-contact-title", ["Contact Me"]);
-    this._typingText(".typing-skills-title", ["Skills"]);
+    this._typingText(".typing-skills-title", ["Tech Stack"]);
   }
 
   _init() {
-    this._revealSection(2);
+    this._revealSection(0);
     this._activateTypingText();
   }
 }
