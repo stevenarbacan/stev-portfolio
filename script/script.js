@@ -49,7 +49,7 @@ class App {
   }
 
   _init() {
-    this._revealSection(0);
+    this._revealSection(2);
     this._activateTypingText();
   }
 }

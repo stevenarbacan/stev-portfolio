@@ -177,6 +177,7 @@ img,
   text-indent: 30px;
   width: 100%;
   word-spacing: 10px;
+  letter-spacing: 2px;
 }
 
 /* ABOUT */
@@ -223,8 +224,32 @@ img,
 .php-icon {
   background-image: url(../img/php-icon.png);
 }
-.mysql {
+.mysql-icon {
   background-image: url(../img/mysql-icon.png);
+}
+.git-icon {
+  background-image: url(../img/git-icon.png);
+}
+.git-hub-icon {
+  background-image: url(../img/github-icon.png);
+}
+.mongodb-icon {
+  background-image: url(../img/mongodb-icon.png);
+}
+.express-js-icon {
+  background-image: url(../img/expressjs-icon.png);
+}
+.photoshop-icon {
+  background-image: url(../img/photoshop-icon.png);
+}
+.postman-icon {
+  background-image: url(../img/postman-icon.webp);
+}
+.react-js-icon {
+  background-image: url(../img/react-js-icon.webp);
+}
+.ejs-icon {
+  background-image: url(../img/ejs-icon.png);
 }
 
 .skills-main-container {
@@ -250,8 +275,8 @@ img,
   align-items: center;
 }
 .skill-card {
-  width: 70px;
-  height: 70px;
+  width: 65px;
+  height: 65px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -259,8 +284,11 @@ img,
   gap: 4px;
   padding: 10px;
   border: 1px solid #fefefe;
-  border-radius: 5px;
+  border-radius: 15px;
   cursor: pointer;
+}
+.icon-text {
+  font-size: 0.9em;
 }
 .card-icon {
   width: 50px;
@@ -318,6 +346,7 @@ img,
   color: #fefefe;
 }
 
+/* Width Responsiveness */
 @media only screen and (max-width: 800px) {
   .section {
     width: 85%;
@@ -341,7 +370,6 @@ img,
   .about-text {
     font-size: 1.5em;
   }
-
   /* ABOUT */
   .about-img {
     width: 70%;
@@ -350,6 +378,11 @@ img,
 }
 
 @media only screen and (max-width: 700px) {
+  .typing-about-title,
+  .typing-skills-title,
+  .typing-contact-title {
+    font-size: 0.9em;
+  }
   .section {
     width: 95%;
     min-height: 80vh;
@@ -370,6 +403,7 @@ img,
   .name-text {
     font-weight: 700;
   }
+
   .home-body-text,
   .about-text {
     font-size: 1.3em;
@@ -379,6 +413,22 @@ img,
   .about-img {
     width: 70%;
     max-width: 250px;
+  }
+
+  /* Skills */
+  .skills-main-container {
+    gap: 25px;
+  }
+  .skill-card {
+    width: 45px;
+    height: 45px;
+  }
+  .card-icon {
+    width: 20px;
+    height: 20px;
+  }
+  .icon-text {
+    font-size: 0.8em;
   }
 }
 @media only screen and (max-width: 500px) {
@@ -444,6 +494,29 @@ img,
   .about-text {
     width: 80%;
   }
+  /* Skills */
+  .skills-container {
+    align-items: center;
+    gap: 15px;
+  }
+  .skills-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+  }
+  .skill-card {
+    width: 50px;
+    height: 50px;
+  }
+  .card-icon {
+    width: 35px;
+    height: 35px;
+  }
+  .icon-text {
+    font-size: 0.7em;
+  }
 
   /*Contact*/
   /* CONTACT  */
@@ -462,9 +535,103 @@ img,
   }
 }
 
-.nav-btn:hover {
+/* Height Reponsiveness  540px original*/
+@media only screen and (max-height: 540px) {
+  .buttom-nav {
+    height: 55px;
+    top: 92%;
+  }
+  .nav-btn {
+    width: 45px;
+    height: 45px;
+  }
+  .nav-icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  .section {
+    width: 95%;
+    min-height: 80vh;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    padding-top: 0px;
+    justify-content: center;
+    top: 0%;
+  }
+  .home-main-container,
+  .about-main-container {
+    width: 100%;
+    gap: 20px;
+  }
+  .header-container {
+    gap: 8px;
+    flex-direction: row;
+  }
+  .profile-img {
+    width: 120px;
+    height: 120px;
+  }
+  .home-header-text {
+    font-size: 1.2em;
+    word-spacing: 3px;
+    gap: 2px;
+  }
+  .name-text {
+    font-weight: 700;
+  }
+  .home-body-text,
+  .about-text {
+    font-size: 1.2em;
+    word-spacing: 3px;
+  }
+
+  /* ABOUT */
+  .about-container {
+    gap: 20px;
+    justify-content: center;
+  }
+  .about-img {
+    width: 40%;
+    height: 80%;
+  }
+  .about-text {
+    width: 80%;
+  }
+
+  /* Skills */
+  .skills-container {
+    align-items: center;
+    gap: 5px;
+  }
+  .skills-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+  }
+  .skill-card {
+    width: 50px;
+    height: 50px;
+  }
+  .card-icon {
+    width: 35px;
+    height: 35px;
+  }
+  .icon-text {
+    font-size: 0.7em;
+  }
+}
+.nav-btn:hover,
+.icon-text:hover {
   color: #fdff96;
 }
+.skill-card:hover {
+  border: 1px solid #fdff96;
+}
+
 .home-icon:hover {
   background-image: url(../img/hover-home-icon.png);
 }
