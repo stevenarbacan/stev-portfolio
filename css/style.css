@@ -747,6 +747,18 @@ img,
   .section {
     width: 80%;
   }
+
+  /* Projects */
+  .project-img {
+    height: 50vh;
+    max-width: 100%;
+  }
+  .project-description-container {
+    width: 80%;
+  }
+  .project-description {
+    font-size: 1em;
+  }
 }
 
 .nav-btn:hover,
