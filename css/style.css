@@ -749,15 +749,18 @@ img,
   }
 
   /* Projects */
+  .project-main-container {
+    width: 95%;
+  }
   .project-img {
     height: 50vh;
-    max-width: 100%;
+    max-width: 80%;
   }
   .project-description-container {
     width: 80%;
   }
   .project-description {
-    font-size: 1em;
+    font-size: 0.7em;
   }
 }
 
